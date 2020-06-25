@@ -1,0 +1,8 @@
+---
+version: '3.3'
+services:
+  u1:
+    image: nginx
+    ports:
+      - "8888:80"
+    restart: always

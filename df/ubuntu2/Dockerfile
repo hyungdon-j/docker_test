@@ -1,4 +1,5 @@
 FROM ubuntu
+MAINTAINER Joo Hyungdon <hyungdon.joo@kt.com>
 
 RUN apt update
 #RUN apt install -y vim
