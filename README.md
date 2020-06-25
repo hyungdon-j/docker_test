@@ -1,3 +1,1 @@
-# docker_test
-
-test2
+$ docker build --tag hyungdon/ubuntu_nginx .
