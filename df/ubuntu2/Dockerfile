@@ -1,9 +1,15 @@
 FROM ubuntu
 
 RUN apt update
-RUN apt install -y vim
-RUN apt install -y tree
+#RUN apt install -y vim
+#RUN apt install -y tree
 RUN apt install -y nginx
 RUN apt install -y curl
+RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+RUN chown -R www-data:www-data /var/lib/nginx
 
-# CMD ["nginx"]
+WORKDIR /etc/nginx
+CMD ["nginx"]
+
+EXPOSE 80
+EXPOSE 443
