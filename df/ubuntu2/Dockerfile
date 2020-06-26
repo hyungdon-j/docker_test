@@ -10,7 +10,7 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 RUN chown -R www-data:www-data /var/lib/nginx
 
 WORKDIR /etc/nginx
-CMD ["nginx"]
+CMD ["nginx", "-g","daemon off;"]
 
 EXPOSE 80
 EXPOSE 443
